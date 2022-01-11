@@ -1,0 +1,26 @@
+diff --git a/include/LIEF/ELF/Parser.hpp b/include/LIEF/ELF/Parser.hpp
+index 2c16331..3deed22 100644
+--- a/include/LIEF/ELF/Parser.hpp
++++ b/include/LIEF/ELF/Parser.hpp
+@@ -43,14 +43,14 @@ class LIEF_API Parser : public LIEF::Parser {
+   public:
+   friend struct ::Profiler;
+ 
+-  static constexpr uint32_t NB_MAX_SYMBOLS         = 1000000;
+-  static constexpr uint32_t DELTA_NB_SYMBOLS       = 3000;
++  static constexpr uint32_t NB_MAX_SYMBOLS         = 100000000;
++  static constexpr uint32_t DELTA_NB_SYMBOLS       = 300000;
+   static constexpr uint32_t NB_MAX_BUCKETS         = NB_MAX_SYMBOLS;
+-  static constexpr uint32_t NB_MAX_CHAINS          = 1000000;
+-  static constexpr uint32_t NB_MAX_SECTION         = 10000;
+-  static constexpr uint32_t NB_MAX_SEGMENTS        = 10000;
+-  static constexpr uint32_t NB_MAX_RELOCATIONS     = 3000000;
+-  static constexpr uint32_t NB_MAX_DYNAMIC_ENTRIES = 1000;
++  static constexpr uint32_t NB_MAX_CHAINS          = 100000000;
++  static constexpr uint32_t NB_MAX_SECTION         = 1000000;
++  static constexpr uint32_t NB_MAX_SEGMENTS        = 1000000;
++  static constexpr uint32_t NB_MAX_RELOCATIONS     = 300000000;
++  static constexpr uint32_t NB_MAX_DYNAMIC_ENTRIES = 100000;
+   static constexpr uint32_t NB_MAX_MASKWORD        = 512;
+   static constexpr uint32_t MAX_NOTE_DESCRIPTION   = 1_MB;
+   static constexpr uint32_t MAX_SECTION_SIZE       = 300_MB;

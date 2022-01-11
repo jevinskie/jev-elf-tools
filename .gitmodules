@@ -1,0 +1,12 @@
+[submodule "3rdparty/LIEF"]
+	path = 3rdparty/LIEF
+	url = https://github.com/lief-project/LIEF
+[submodule "3rdparty/fmt"]
+	path = 3rdparty/fmt
+	url = https://github.com/fmtlib/fmt
+[submodule "3rdparty/mio"]
+	path = 3rdparty/mio
+	url = https://github.com/mandreyel/mio
+[submodule "3rdparty/scope-guard"]
+	path = 3rdparty/scope-guard
+	url = https://github.com/offa/scope-guard

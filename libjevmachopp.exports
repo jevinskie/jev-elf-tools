@@ -1,0 +1,11 @@
+blk_dread
+blk_get_device
+calloc
+dev_get_uclass_plat
+free
+malloc
+memalign
+realloc
+uboot_apfs_doit
+board_fit_image_post_process
+board_fit_config_name_match
