@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+
+import argparse
+import sys
+
+from elftools.elf.elffile import ELFFile
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument('elf_file', metavar='ELF', help='ELF file')
+parser.add_argument("-s", "--section", default=".text", help="ELF section to dump (default: .text)")
+parser.add_argument("-b", "--binary", action="store_true", help="Output binary instead of hex")
+args = parser.parse_args()
+
+elf = ELFFile(open(args.elf_file, "rb"))
+
+sect = elf.get_section_by_name(args.section)
+if sect is None:
+	print(f"Section \"{args.section}\" not found.", file=sys.stderr)
+	sys.exit(-1)
+if args.binary:
+	sys.stdout.buffer.write(sect.data())
+else:
+	print(sect.data().hex())
